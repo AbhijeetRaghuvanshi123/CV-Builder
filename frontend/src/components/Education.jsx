@@ -5,7 +5,7 @@ const Education = ({ addEducation }) => {
     const [education, setEducation] = useState({
         schoolName: "",
         major: "",
-        dateOfCompletetion: "",
+        dateOfCompletion: "",
         id: nanoid()
     })
 
@@ -22,7 +22,7 @@ const Education = ({ addEducation }) => {
         setEducation({
             schoolName: "",
             major: "",
-            dateOfCompletetion: "",
+            dateOfCompletion: "",
             id: nanoid()
         })
     }
@@ -69,9 +69,9 @@ const Education = ({ addEducation }) => {
                 <h4>Date of Completetion: </h4>
                 <input
                     type="date"
-                    name="dateOfCompletetion"
+                    name="dateOfCompletion"
                     placeholder="Date"
-                    value={education.dateOfCompletetion}
+                    value={education.dateOfCompletion}
                     onChange={handleChange}
                     required
                 />
@@ -80,7 +80,7 @@ const Education = ({ addEducation }) => {
             <div>{educationList.map((education)=> {
                 return (
                     <div key={education.id}>
-                        <h3>{education.major}</h3>
+                        <h3>{education.major} - {education.schoolName}</h3>
                         <button onClick={()=>handleEdit(education.id)}>Edit</button> <button onClick={()=>handleDelete(education.id)}>Delete</button>
                     </div>
                 )

@@ -1,35 +1,55 @@
-const Preview = ({ cvData}) => {
+const Preview = ({ cvData }) => {
+  return (
+    <div className="preview">
 
-    return (
-        <div className="preview">
-            <h2>Personal Details</h2>
-            <h4>{cvData.general.name} | {cvData.general.email} | {cvData.general.number}</h4>
-            <br />
-            <h2>Education Details</h2>
-            <ul>
-                {cvData.education.map((education, index) => {
-                    return (
-                        <li key={index} id={education.id}>
-                            <h4>{education.schoolName} | {education.major} | {education.dateOfCompletetion}</h4>
-                        </li>)
-                })}
-            </ul>
-            <br />
-            <h2>Experience Details</h2>
-            <ul>
-                {cvData.experience.map((experience, index) => {
-                    return (
-                        <li key={index}>
-                            <h4>Orgnization: {experience.companyName} | Position: {experience.position}</h4>
-                            <h4>Role Overview: </h4>
-                            <h5>{experience.description}</h5>
-                            <h4>Join Date: {experience.startDate} | End Date: {experience.endDate}</h4>
-                        </li>
-                    )
-                })}
-            </ul>
-        </div>
-    )
+      <h1>{cvData.general.name}</h1>
+
+      <div className="contact">
+        {cvData.general.email} | {cvData.general.phone}
+      </div>
+
+      <h2>Education</h2>
+
+      <ul>
+        {cvData.education.map((education) => (
+          <li key={education.id}>
+            <div className="education-title">
+              {education.major} — {education.schoolName}
+            </div>
+
+            <div className="education-date">
+              {education.dateOfCompletion}
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      <h2>Experience</h2>
+
+      <ul>
+        {cvData.experience.map((experience) => (
+          <li key={experience.id}>
+            <div className="exp-title">
+              {experience.position}
+            </div>
+
+            <div className="exp-company">
+              {experience.companyName}
+            </div>
+
+            <div className="exp-description">
+              {experience.description}
+            </div>
+
+            <div className="exp-date">
+              {experience.startDate} — {experience.endDate}
+            </div>
+          </li>
+        ))}
+      </ul>
+
+    </div>
+  )
 }
 
 export default Preview;

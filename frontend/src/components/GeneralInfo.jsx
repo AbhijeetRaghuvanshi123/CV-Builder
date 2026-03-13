@@ -4,7 +4,7 @@ const GeneralInfo = ({ addGeneralInfo }) => {
     const [info, setInfo] = useState({
         name: "",
         email: "",
-        number: ""
+        phone: ""
     })
 
     const handleChange = (e) => {
@@ -42,8 +42,8 @@ const GeneralInfo = ({ addGeneralInfo }) => {
             <input
                 type="tel"
                 placeholder="Number"
-                name="number"
-                value={info.number}
+                name="phone"
+                value={info.phone}
                 onChange={handleChange}
                 required
             />
