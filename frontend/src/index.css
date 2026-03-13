@@ -1,0 +1,82 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page background */
+body {
+  background: #f2f2f2;
+  padding: 20px;
+}
+
+/* Main layout */
+.container {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Left side (forms) */
+.form-section {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+/* Right side (preview) */
+.preview-section {
+  background: white;
+  border: 1px solid #bbb;
+  padding: 30px;
+  min-height: 600px;
+}
+
+/* Headings */
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 4px;
+}
+
+h3, h4 {
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+/* Forms */
+form {
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 6px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #777;
+  font-size: 14px;
+}
+
+/* Button */
+button {
+  padding: 6px 14px;
+  border: 1px solid #333;
+  background: #2b2b2b;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #444;
+}
+
+/* Preview spacing */
+.preview-section div {
+  margin-bottom: 15px;
+}
