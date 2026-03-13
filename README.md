@@ -18,4 +18,4 @@ A resume builder built with React.
 
 ## Live Demo
 
-[text](https://cv-builder-pied-one.vercel.app/)
+[CV BUILDER LIVE LINK](https://cv-builder-pied-one.vercel.app/)
